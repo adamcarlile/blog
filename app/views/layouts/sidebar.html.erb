@@ -1,0 +1,12 @@
+<%= render partial: 'layouts/partials/header' %>
+  <section id="content-support">
+    <div class="inner">
+      <section id="main-column">
+        <%= yield %>
+      </section>
+      <aside id="support">
+        <%= yield(:support) %>
+      </aside>
+    </div>
+  </section>
+<%= render partial: 'layouts/partials/footer' %>

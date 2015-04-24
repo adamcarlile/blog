@@ -1,0 +1,8 @@
+<article>
+  <header>
+    <h1><%= link_to renderer.post.title, post_path(renderer.post) %></h1>
+    <time><%= renderer.post.publish_date.to_s(:long) %></time>
+    <time><%= distance_of_time_in_words(renderer.post.time_to_read) %> - <%= renderer.post.wordcount %> words</time>
+  </header>
+  <p><%= renderer.post.summary %></p>
+</article>

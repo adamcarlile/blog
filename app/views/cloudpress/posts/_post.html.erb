@@ -1,0 +1,22 @@
+<article id="<%= "post-#{renderer.post.id}" %>">
+  <header>
+    <h1><%= renderer.post.title %></h1>
+    <time class="published-at"> 
+      <%= renderer.post.publish_date.to_s(:long) %>
+    </time>
+    <time>
+      <%= distance_of_time_in_words(renderer.post.time_to_read) %> - <%= renderer.post.wordcount %> words
+    </time>
+    <%= render_cloudpress_tags(renderer.post.tags) if renderer.tags? %>
+  </header>
+  <%= renderer.post.body.html_safe %>
+  <footer>
+    <%= yield %>
+  </footer>
+</article>
+
+<%= content_for :support do %>
+  <%= render partial: 'support/about_me' %>
+  <%= render partial: 'support/tags' %>
+  <%= render partial: 'support/archives' %>
+<% end %>

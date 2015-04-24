@@ -1,0 +1,10 @@
+<% content_for(:title) { "Posts" } %>
+
+<%= render_cloudpress_posts(posts) %>
+<%= paginate posts %>
+
+<% content_for :support do %>
+  <%= render partial: 'support/about_me' %>
+  <%= render partial: 'support/tags' %>
+  <%= render partial: 'support/archives' %>
+<% end %>

@@ -1,0 +1,17 @@
+<% content_for(:title) { "Archive #{archive.year.to_s}" } %>
+
+<% if posts.any? %>
+  <h1>
+  <%= render_cloudpress_posts(posts) %>
+  <%= paginate posts %>
+<% else %>
+  <div class='flash notice'>
+    <p>Looks like I didn't write anything! Poor form Adam</p>
+  </div>
+<% end %>
+
+<% content_for :support do %>
+  <%= render partial: 'support/about_me' %>
+  <%= render partial: 'support/tags' %>
+  <%= render partial: 'support/archives' %>
+<% end %>

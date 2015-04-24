@@ -1,0 +1,30 @@
+@mixin tag
+  font-size: 12px
+  display: block
+  padding: 5px
+  padding-top: 0px
+  padding-bottom: 0px
+  background-color: #cccccc
+  font-style: normal
+  font-family: 'Helvetica', 'Arial', sans-serif
+  border-radius: 3px
+  color: $text-color
+
+  &:hover
+    background-color: $link-hover
+    color: #ffffff
+
+ul.tag-list
+  +clearfix
+  margin: 0px !important
+  padding: 0px !important
+
+  li
+    float: left
+    list-style: none !important
+    line-height: 1em !important
+    margin-right: 5px
+    margin-top: 5px
+
+    a
+      +tag

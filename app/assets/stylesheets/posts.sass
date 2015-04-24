@@ -1,0 +1,78 @@
+// Place all the styles related to the Posts controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+@mixin paragraph
+  line-height: 1.7em
+  font-size: golden-ratio(30px, -1)
+  font-family: $serif
+  padding:
+    top: golden-ratio(18px, 0)
+    bottom: 0px
+
+div.subtitle
+  +outer-container
+
+section#main-column
+  article
+    header
+      ul.tag-list
+        padding-top: 1em !important
+      h1
+        font-size: 1.8em
+        margin-top: 0px
+        margin-bottom: 0.2em
+
+      time
+        font-style: italic
+        font-size: 0.8em
+        color: $grey
+
+    h2, h3, h4
+      margin:
+        top: 1.4em
+        bottom: 0.2em
+      +clearfix
+
+    p, ul
+      +paragraph
+      +clearfix
+
+    ul
+      margin:
+        top: 1em
+        bottom: 1em
+
+      li
+        list-style: disc
+
+    div.highlight
+      margin:
+        top: 1em
+        bottom: 1em
+      padding: 1em
+      line-height: 1.1em
+
+      pre
+        padding: 0px
+        margin: 0px
+      
+section#main-column
+  div.post-list
+    article
+      margin-bottom: 60px
+
+      h2
+        margin-top: 0px
+        font-size: 30px
+        +text-dropshadow
+
+      p
+        +paragraph
+        margin-top: 10px
+
+
+      time
+        font-style: italic
+        font-size: 0.8em
+        color: $grey
