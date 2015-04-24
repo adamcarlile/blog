@@ -5,6 +5,22 @@ GIT
     metadown (1.1.0.beta)
       redcarpet
 
+PATH
+  remote: ../../cloudpress
+  specs:
+    cloudpress (0.1.2)
+      acts-as-taggable-on
+      builder
+      dropbox-sdk
+      friendly_id
+      groupdate
+      kaminari
+      metadown
+      nokogiri
+      pygments.rb
+      rails (~> 4.2.0)
+      slim
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -58,18 +74,6 @@ GEM
     builder (3.2.2)
     byebug (4.0.2)
       columnize (= 0.9.0)
-    cloudpress (0.1.2)
-      acts-as-taggable-on
-      builder
-      dropbox-sdk
-      friendly_id
-      groupdate
-      kaminari
-      metadown
-      nokogiri
-      pygments.rb
-      rails (~> 4.2.0)
-      slim
     coderay (1.1.0)
     coffee-rails (4.1.0)
       coffee-script (>= 2.2.0)
@@ -207,7 +211,7 @@ DEPENDENCIES
   bitters
   bourbon
   byebug
-  cloudpress
+  cloudpress!
   coffee-rails (~> 4.1.0)
   jbuilder (~> 2.0)
   jquery-rails
