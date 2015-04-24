@@ -1,7 +1,6 @@
 <% content_for(:title) { "Archive #{archive.year.to_s}" } %>
 
 <% if posts.any? %>
-  <h1>
   <%= render_cloudpress_posts(posts) %>
   <%= paginate posts %>
 <% else %>
