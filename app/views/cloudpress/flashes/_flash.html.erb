@@ -1,0 +1,6 @@
+<%= content_tag(:div, renderer.flash_html_attributes) do %>
+  <div class="inner">
+    <%= renderer.icon %>
+    <%= yield %>
+  </div>
+<% end %>

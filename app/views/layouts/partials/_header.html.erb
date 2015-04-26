@@ -29,5 +29,6 @@
       </div>
     </header>
     <div id="banner" style="background-image: url(<%= background_image %>)">
+      <%= render_flashes %>
       <%= content_for?(:banner) ? content_tag(:div, yield(:banner), class: 'subtitle') : nil %>
     </div>

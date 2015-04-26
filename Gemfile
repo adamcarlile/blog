@@ -1,4 +1,4 @@
-ruby '2.0.0'
+ruby '2.2.0'
 
 source 'https://rubygems.org'
 
@@ -14,6 +14,7 @@ gem 'metadown', github: 'steveklabnik/metadown'
 gem 'bourbon'
 gem 'neat'
 gem 'bitters'
+gem 'font-awesome-sass'
 
 gem 'jquery-rails'
 gem 'jbuilder', '~> 2.0'
