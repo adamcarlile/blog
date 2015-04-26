@@ -4,7 +4,7 @@
 
 @mixin paragraph
   line-height: 1.7em
-  font-size: golden-ratio(30px, -1)
+  font-size: golden-ratio(25px, -1)
   font-family: $serif
   padding:
     top: golden-ratio(18px, 0)
@@ -47,13 +47,26 @@ section#main-column
       +paragraph
       +clearfix
 
+    code
+      background-color: lighten(#cccccc, 10%)
+      padding:
+        left: 0.5em
+        right: 0.5em
+
     ul
+      padding: 0px
       margin:
         top: 1em
         bottom: 1em
+        left: 1em
 
       li
         list-style: disc
+
+        ul
+          margin: 0px
+          padding: 0px
+          margin-left: 1em
 
     div.highlight
       margin:
