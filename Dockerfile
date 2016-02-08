@@ -1,17 +1,20 @@
-FROM ruby:2.2.0
+FROM ruby:2.3.0-slim
+RUN apt-get update && apt-get install -qq -y build-essential nodejs libpq-dev postgresql-client-9.4 git-core --fix-missing --no-install-recommends
 
-RUN apt-get update -qq && apt-get install -y build-essential
+ENV INSTALL_PATH /app
+RUN mkdir -p $INSTALL_PATH
 
-# for postgres, nokogiri, Node
-RUN apt-get install -y libpq-dev libxml2-dev libxslt1-dev nodejs
+WORKDIR $INSTALL_PATH
 
-ENV APP_HOME /app
-RUN mkdir $APP_HOME
-WORKDIR $APP_HOME
+COPY Gemfile Gemfile.lock ./
+RUN gem install bundler && bundle install --deployment --path vendor/cache --jobs 20 --retry 5 --without development test
 
-ADD Gemfile* $APP_HOME/
-RUN bundle install
+ENV RAILS_ENV production 
+ENV RACK_ENV production
 
-ADD . $APP_HOME
+COPY . ./
+RUN bundle exec rake assets:precompile
 
-RUN RAILS_ENV=production rake assets:precompile
+VOLUME ["$INSTALL_PATH/public"]
+
+CMD bundle exec puma -C config/puma.rb
