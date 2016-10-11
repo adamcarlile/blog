@@ -1,5 +1,5 @@
 FROM ruby:2.3.0-slim
-RUN apt-get update && apt-get install -qq -y build-essential nodejs libpq-dev postgresql-client-9.4 git-core --fix-missing --no-install-recommends
+RUN apt-get update && apt-get install -qq -y build-essential nodejs libpq-dev postgresql-client-9.4 git-core python --fix-missing --no-install-recommends
 
 ENV INSTALL_PATH /app
 RUN mkdir -p $INSTALL_PATH
