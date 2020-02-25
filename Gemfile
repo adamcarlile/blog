@@ -1,4 +1,4 @@
-ruby '2.3.0'
+ruby '2.6.5'
 
 source 'https://rubygems.org'
 
@@ -12,6 +12,7 @@ gem 'coffee-rails', '~> 4.1.0'
 gem 'cloudpress'
 gem 'metadown', github: 'steveklabnik/metadown'
 gem 'bourbon'
+gem 'nokogiri', '~> 1.6.7'
 gem 'neat'
 gem 'bitters'
 gem 'font-awesome-sass'
