@@ -1,5 +1,5 @@
 GIT
-  remote: git://github.com/steveklabnik/metadown.git
+  remote: https://github.com/steveklabnik/metadown.git
   revision: 972c908cfbbe750a73a108467d432d41879c859f
   specs:
     metadown (1.1.0.beta)
@@ -127,7 +127,7 @@ GEM
     neat (1.7.2)
       bourbon (>= 4.0)
       sass (>= 3.3)
-    nio4r (2.5.2)
+    nio4r (2.5.8)
     nokogiri (1.6.8.1)
       mini_portile2 (~> 2.1.0)
     pg (0.21.0)
@@ -136,7 +136,7 @@ GEM
       method_source (~> 0.9.0)
     pry-rails (0.3.9)
       pry (>= 0.10.4)
-    puma (4.3.1)
+    puma (4.3.12)
       nio4r (~> 2.0)
     pygments.rb (1.2.1)
       multi_json (>= 1.0.0)
@@ -177,7 +177,7 @@ GEM
     rb-inotify (0.10.1)
       ffi (~> 1.0)
     rdoc (4.3.0)
-    redcarpet (3.5.0)
+    redcarpet (3.5.1)
     sass (3.7.4)
       sass-listen (~> 4.0.0)
     sass-listen (4.0.0)
