@@ -1,5 +1,5 @@
 GIT
-  remote: git://github.com/steveklabnik/metadown.git
+  remote: https://github.com/steveklabnik/metadown.git
   revision: 972c908cfbbe750a73a108467d432d41879c859f
   specs:
     metadown (1.1.0.beta)
@@ -177,7 +177,7 @@ GEM
     rb-inotify (0.10.1)
       ffi (~> 1.0)
     rdoc (4.3.0)
-    redcarpet (3.5.0)
+    redcarpet (3.5.1)
     sass (3.7.4)
       sass-listen (~> 4.0.0)
     sass-listen (4.0.0)
@@ -208,7 +208,7 @@ GEM
     thor (0.20.3)
     thread_safe (0.3.6)
     tilt (2.0.10)
-    tzinfo (1.2.6)
+    tzinfo (1.2.10)
       thread_safe (~> 0.1)
     uglifier (4.2.0)
       execjs (>= 0.3.0, < 3)
